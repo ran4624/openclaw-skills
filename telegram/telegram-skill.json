@@ -1,0 +1,19 @@
+{
+  "name": "telegram-bridge",
+  "version": "1.0.0",
+  "description": "通过 Telegram Bot 与 OpenClaw 进行交互",
+  "author": "OpenClaw",
+  "type": "external",
+  "command": "python3",
+  "args": ["~/.openclaw/channels/telegram_bot.py"],
+  "env": {
+    "PYTHONPATH": "~/.openclaw/channels"
+  },
+  "capabilities": [
+    "messaging",
+    "notifications"
+  ],
+  "timeout": 0,
+  "interactive": true,
+  "persistent": true
+}

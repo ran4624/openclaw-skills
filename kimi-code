@@ -1,0 +1,20 @@
+#!/bin/bash
+# Kimi Code Agent 快速调用脚本
+# 用法: kimi-code "<任务描述>" [工作目录]
+
+set -e
+
+TASK="$1"
+WORKSPACE="${2:-$(pwd)}"
+
+if [ -z "$TASK" ]; then
+    echo "用法: kimi-code '<任务描述>' [工作目录]"
+    echo ""
+    echo "示例:"
+    echo '  kimi-code "创建一个 Python Hello World 程序"'
+    echo '  kimi-code "修复当前目录下的 bug" /path/to/project'
+    exit 1
+fi
+
+# 调用 wrapper 脚本
+exec /root/.openclaw/skills/kimi-code-wrapper.sh "$TASK" "$WORKSPACE"

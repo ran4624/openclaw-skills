@@ -1,0 +1,21 @@
+{
+  "name": "kimi-code-agent",
+  "version": "1.0.0",
+  "description": "使用 Kimi Code CLI 进行编程开发任务",
+  "author": "OpenClaw",
+  "type": "external",
+  "command": "/root/.openclaw/skills/kimi-code-wrapper.sh",
+  "args": ["{{task}}", "{{workspace}}"],
+  "env": {
+    "KIMI_WORKSPACE": "{{workspace}}"
+  },
+  "capabilities": [
+    "code",
+    "edit",
+    "read",
+    "write",
+    "shell"
+  ],
+  "timeout": 300,
+  "interactive": true
+}

@@ -1,0 +1,14 @@
+{
+  "name": "kimi-code-hook",
+  "version": "1.0.0",
+  "description": "OpenClaw Hook for Kimi Code CLI",
+  "hooks": {
+    "coding": {
+      "command": "/root/.openclaw/skills/kimi-code-wrapper.sh",
+      "args": ["{{prompt}}", "{{workspace}}"],
+      "env": {
+        "KIMI_WORKSPACE": "{{workspace}}"
+      }
+    }
+  }
+}
